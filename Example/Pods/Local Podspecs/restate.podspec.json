@@ -1,0 +1,22 @@
+{
+  "name": "restate",
+  "version": "0.1.0",
+  "summary": "A short description of restate.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/13190143/restate",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "13190143": "moribaleta.work@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/13190143/restate.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "restate/Classes/**/*"
+}

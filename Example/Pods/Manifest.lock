@@ -1,0 +1,16 @@
+PODS:
+  - restate (0.1.0)
+
+DEPENDENCIES:
+  - restate (from `../`)
+
+EXTERNAL SOURCES:
+  restate:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  restate: e1ac4ca019f4dc8d137ea7e90e8de4cdd9dc7510
+
+PODFILE CHECKSUM: 21d01ab8f97d7c4d70fc01b19a9229b445a10bcc
+
+COCOAPODS: 1.10.1

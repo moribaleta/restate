@@ -1,0 +1,6 @@
+framework module restate {
+  umbrella header "restate-umbrella.h"
+
+  export *
+  module * { export * }
+}
