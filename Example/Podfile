@@ -1,0 +1,6 @@
+use_frameworks!
+target 'restate_Tests' do
+  pod 'restate', :path => '../'
+  
+  
+end
