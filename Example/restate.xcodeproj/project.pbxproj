@@ -9,18 +9,58 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8370FEC264DFE7680C730DE0 /* Pods_restate_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9700B8B60611FB89A3F24232 /* Pods_restate_Tests.framework */; };
+		A373DC5226B0D22F0012BDD7 /* StateProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC4D26B0D22E0012BDD7 /* StateProperty.swift */; };
+		A373DC5326B0D22F0012BDD7 /* StoreStateUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC4F26B0D22E0012BDD7 /* StoreStateUtilities.swift */; };
+		A373DC5526B0D2380012BDD7 /* ReBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC5426B0D2380012BDD7 /* ReBaseController.swift */; };
+		A373DC5726B0D2890012BDD7 /* ReNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC5626B0D2890012BDD7 /* ReNavigationController.swift */; };
+		A373DC5926B0D3750012BDD7 /* ReBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC5826B0D3750012BDD7 /* ReBaseNavigationController.swift */; };
+		A373DC5B26B0D4090012BDD7 /* ReState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC5A26B0D4090012BDD7 /* ReState.swift */; };
+		A373DC5D26B0D4240012BDD7 /* StatePropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC5C26B0D4240012BDD7 /* StatePropertyList.swift */; };
+		A373DC5F26B0D49C0012BDD7 /* ReNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC5E26B0D49C0012BDD7 /* ReNode.swift */; };
+		A373DC6126B0D4C70012BDD7 /* ErrorDisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC6026B0D4C70012BDD7 /* ErrorDisplayType.swift */; };
+		A373DC6326B0D4ED0012BDD7 /* ResizeableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC6226B0D4ED0012BDD7 /* ResizeableNode.swift */; };
+		A373DC6626B0D5A80012BDD7 /* ReProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC6526B0D5A80012BDD7 /* ReProtocol.swift */; };
+		A373DC6826B0D5D10012BDD7 /* ProgressiveViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC6726B0D5D10012BDD7 /* ProgressiveViewProtocol.swift */; };
+		A373DC6A26B0D61D0012BDD7 /* ProgressiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC6926B0D61D0012BDD7 /* ProgressiveNode.swift */; };
+		A373DC6C26B0D7FD0012BDD7 /* NavigationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC6B26B0D7FD0012BDD7 /* NavigationStateProtocol.swift */; };
+		A373DC7126B0D8760012BDD7 /* ReEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC6F26B0D8750012BDD7 /* ReEmptyState.swift */; };
+		A373DC7226B0D8760012BDD7 /* ReTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC7026B0D8750012BDD7 /* ReTable.swift */; };
+		A373DC7426B0D8AB0012BDD7 /* ReCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC7326B0D8AB0012BDD7 /* ReCollection.swift */; };
+		A373DC7626B0D8E50012BDD7 /* ReStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC7526B0D8E50012BDD7 /* ReStack.swift */; };
+		A373DC7826B0D9020012BDD7 /* ReScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC7726B0D9020012BDD7 /* ReScroll.swift */; };
+		A373DC7A26B0D9EB0012BDD7 /* ReButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373DC7926B0D9EB0012BDD7 /* ReButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F074666DCE71200118F3EC2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4FFF69684D1C88CB6C7DDDEE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2F074666DCE71200118F3EC2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4FFF69684D1C88CB6C7DDDEE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* restate_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = restate_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8758C4FA09A5534EEC0DE13E /* restate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = restate.podspec; path = ../restate.podspec; sourceTree = "<group>"; };
+		8758C4FA09A5534EEC0DE13E /* restate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = restate.podspec; path = ../restate.podspec; sourceTree = "<group>"; };
 		9700B8B60611FB89A3F24232 /* Pods_restate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_restate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		994B8C10C0E8D7E7ED3103EB /* Pods-restate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restate_Tests.debug.xcconfig"; path = "Target Support Files/Pods-restate_Tests/Pods-restate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9ABE8A188FDBCD3F091A943E /* Pods-restate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restate_Tests.release.xcconfig"; path = "Target Support Files/Pods-restate_Tests/Pods-restate_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A373DC4D26B0D22E0012BDD7 /* StateProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateProperty.swift; sourceTree = "<group>"; };
+		A373DC4F26B0D22E0012BDD7 /* StoreStateUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreStateUtilities.swift; sourceTree = "<group>"; };
+		A373DC5426B0D2380012BDD7 /* ReBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReBaseController.swift; sourceTree = "<group>"; };
+		A373DC5626B0D2890012BDD7 /* ReNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReNavigationController.swift; sourceTree = "<group>"; };
+		A373DC5826B0D3750012BDD7 /* ReBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReBaseNavigationController.swift; sourceTree = "<group>"; };
+		A373DC5A26B0D4090012BDD7 /* ReState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReState.swift; sourceTree = "<group>"; };
+		A373DC5C26B0D4240012BDD7 /* StatePropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePropertyList.swift; sourceTree = "<group>"; };
+		A373DC5E26B0D49C0012BDD7 /* ReNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReNode.swift; sourceTree = "<group>"; };
+		A373DC6026B0D4C70012BDD7 /* ErrorDisplayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayType.swift; sourceTree = "<group>"; };
+		A373DC6226B0D4ED0012BDD7 /* ResizeableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeableNode.swift; sourceTree = "<group>"; };
+		A373DC6526B0D5A80012BDD7 /* ReProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReProtocol.swift; sourceTree = "<group>"; };
+		A373DC6726B0D5D10012BDD7 /* ProgressiveViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveViewProtocol.swift; sourceTree = "<group>"; };
+		A373DC6926B0D61D0012BDD7 /* ProgressiveNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveNode.swift; sourceTree = "<group>"; };
+		A373DC6B26B0D7FD0012BDD7 /* NavigationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStateProtocol.swift; sourceTree = "<group>"; };
+		A373DC6F26B0D8750012BDD7 /* ReEmptyState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReEmptyState.swift; sourceTree = "<group>"; };
+		A373DC7026B0D8750012BDD7 /* ReTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReTable.swift; sourceTree = "<group>"; };
+		A373DC7326B0D8AB0012BDD7 /* ReCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCollection.swift; sourceTree = "<group>"; };
+		A373DC7526B0D8E50012BDD7 /* ReStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReStack.swift; sourceTree = "<group>"; };
+		A373DC7726B0D9020012BDD7 /* ReScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReScroll.swift; sourceTree = "<group>"; };
+		A373DC7926B0D9EB0012BDD7 /* ReButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +78,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				A373DC4A26B0D0250012BDD7 /* restate */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -81,6 +122,81 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		A373DC4A26B0D0250012BDD7 /* restate */ = {
+			isa = PBXGroup;
+			children = (
+				A373DC5026B0D22E0012BDD7 /* controllers */,
+				A373DC4C26B0D22E0012BDD7 /* models */,
+				A373DC4E26B0D22E0012BDD7 /* state */,
+				A373DC5126B0D22F0012BDD7 /* views */,
+			);
+			path = restate;
+			sourceTree = "<group>";
+		};
+		A373DC4C26B0D22E0012BDD7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A373DC4D26B0D22E0012BDD7 /* StateProperty.swift */,
+				A373DC5C26B0D4240012BDD7 /* StatePropertyList.swift */,
+				A373DC6B26B0D7FD0012BDD7 /* NavigationStateProtocol.swift */,
+				A373DC6526B0D5A80012BDD7 /* ReProtocol.swift */,
+				A373DC6726B0D5D10012BDD7 /* ProgressiveViewProtocol.swift */,
+				A373DC6F26B0D8750012BDD7 /* ReEmptyState.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		A373DC4E26B0D22E0012BDD7 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				A373DC5A26B0D4090012BDD7 /* ReState.swift */,
+				A373DC4F26B0D22E0012BDD7 /* StoreStateUtilities.swift */,
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		A373DC5026B0D22E0012BDD7 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A373DC5426B0D2380012BDD7 /* ReBaseController.swift */,
+				A373DC5826B0D3750012BDD7 /* ReBaseNavigationController.swift */,
+				A373DC5626B0D2890012BDD7 /* ReNavigationController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		A373DC5126B0D22F0012BDD7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				A373DC6D26B0D83C0012BDD7 /* base */,
+				A373DC6E26B0D8430012BDD7 /* components */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		A373DC6D26B0D83C0012BDD7 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				A373DC6226B0D4ED0012BDD7 /* ResizeableNode.swift */,
+				A373DC5E26B0D49C0012BDD7 /* ReNode.swift */,
+				A373DC6026B0D4C70012BDD7 /* ErrorDisplayType.swift */,
+				A373DC6926B0D61D0012BDD7 /* ProgressiveNode.swift */,
+				A373DC7726B0D9020012BDD7 /* ReScroll.swift */,
+				A373DC7926B0D9EB0012BDD7 /* ReButton.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		A373DC6E26B0D8430012BDD7 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				A373DC7026B0D8750012BDD7 /* ReTable.swift */,
+				A373DC7526B0D8E50012BDD7 /* ReStack.swift */,
+				A373DC7326B0D8AB0012BDD7 /* ReCollection.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		CE5AEC3E36DC9226B5F5AAC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +211,6 @@
 				994B8C10C0E8D7E7ED3103EB /* Pods-restate_Tests.debug.xcconfig */,
 				9ABE8A188FDBCD3F091A943E /* Pods-restate_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,10 +246,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -147,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -178,10 +290,28 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-restate_Tests/Pods-restate_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwiftThunk/ReSwiftThunk.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/restate/restate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftThunk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/restate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +348,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A373DC5B26B0D4090012BDD7 /* ReState.swift in Sources */,
+				A373DC6C26B0D7FD0012BDD7 /* NavigationStateProtocol.swift in Sources */,
+				A373DC7426B0D8AB0012BDD7 /* ReCollection.swift in Sources */,
+				A373DC6A26B0D61D0012BDD7 /* ProgressiveNode.swift in Sources */,
+				A373DC6126B0D4C70012BDD7 /* ErrorDisplayType.swift in Sources */,
+				A373DC7626B0D8E50012BDD7 /* ReStack.swift in Sources */,
+				A373DC7126B0D8760012BDD7 /* ReEmptyState.swift in Sources */,
+				A373DC5926B0D3750012BDD7 /* ReBaseNavigationController.swift in Sources */,
+				A373DC5226B0D22F0012BDD7 /* StateProperty.swift in Sources */,
+				A373DC6626B0D5A80012BDD7 /* ReProtocol.swift in Sources */,
+				A373DC7A26B0D9EB0012BDD7 /* ReButton.swift in Sources */,
+				A373DC6826B0D5D10012BDD7 /* ProgressiveViewProtocol.swift in Sources */,
+				A373DC5D26B0D4240012BDD7 /* StatePropertyList.swift in Sources */,
+				A373DC5526B0D2380012BDD7 /* ReBaseController.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				A373DC6326B0D4ED0012BDD7 /* ResizeableNode.swift in Sources */,
+				A373DC7826B0D9020012BDD7 /* ReScroll.swift in Sources */,
+				A373DC5326B0D22F0012BDD7 /* StoreStateUtilities.swift in Sources */,
+				A373DC5F26B0D49C0012BDD7 /* ReNode.swift in Sources */,
+				A373DC7226B0D8760012BDD7 /* ReTable.swift in Sources */,
+				A373DC5726B0D2890012BDD7 /* ReNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

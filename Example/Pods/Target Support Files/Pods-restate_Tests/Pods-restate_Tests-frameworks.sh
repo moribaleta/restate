@@ -175,9 +175,27 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReSwiftThunk/ReSwiftThunk.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/restate/restate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReSwiftThunk/ReSwiftThunk.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/restate/restate.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

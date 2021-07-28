@@ -2,5 +2,9 @@ use_frameworks!
 target 'restate_Tests' do
   pod 'restate', :path => '../'
   
-  
+  pod "Texture"
+  pod 'ReSwift'
+  pod 'ReSwiftThunk'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
 end
