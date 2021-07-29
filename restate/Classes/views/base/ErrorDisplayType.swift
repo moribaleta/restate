@@ -12,7 +12,7 @@ import AsyncDisplayKit
 /**
  * protocol framework for creating asdisplaynode with errors
  */
-public protocol ErrorDisplayType : AnyClass {
+public protocol ErrorDisplayType : AnyObject {
     
     ///errors shown
     var errorLabels  : [ASTextNode] {get set}

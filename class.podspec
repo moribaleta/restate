@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "class"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "A short description of Restate."
 
   # This description is used to generate tags and improve search results.
@@ -25,11 +25,11 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-	Reswift combined with RxSwift with AsyncDisplayKit
+	ReState combined with ReSwift
                    DESC
 
   spec.homepage     = "https://github.com/moribaleta/restate"
-  # spec.screenshots  = "https://media1.tenor.com/images/4324d537dbc06f422b34ae131c7b3e14/tenor.gif?itemid=7755460"
+  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -64,8 +64,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios
+  spec.platform     = :ios, "11.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -122,6 +122,11 @@ Pod::Spec.new do |spec|
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
+  spec.dependency "Texture"
+  spec.dependency "ReSwift"
+  spec.dependency "ReSwiftThunk"
+  spec.dependency "RxSwift", '~> 6.2.0'
+  spec.dependency "RxCocoa", '~> 6.2.0'
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

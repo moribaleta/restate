@@ -14,7 +14,7 @@ import RxSwift
 /**
  ui component for displaying a list of display in a vertical stackview
  */
-open class ReStack<E> : ReactiveNode<StatePropertyList<E>>, ReEmptyState {
+open class ReStack<E> : ReNode<StatePropertyList<E>>, ReEmptyState {
     
     public typealias StateList = StatePropertyList<E>
     
@@ -29,7 +29,7 @@ open class ReStack<E> : ReactiveNode<StatePropertyList<E>>, ReEmptyState {
     
     public var renderEmptyView: (() -> ASDisplayNode)?
     
-    public var defaultEmptyView: ASDisplayNode = SULEmptyView()
+    public var defaultEmptyView: ASDisplayNode = .init() //SULEmptyView()
     
     public var isEmpty: (() -> Bool)?
     
@@ -43,24 +43,6 @@ open class ReStack<E> : ReactiveNode<StatePropertyList<E>>, ReEmptyState {
             self.setNeedsLayout()
         }
     }
-    
-    open override func disposeView() {
-        //self.children.forEach({$0.removeFromSupernode()})
-        //self.subnodes.forEach({$0.removeFromSupernode()})
-        self.subnodes?.forEach { (child) in
-            (child as? DisposableView)?.disposeView()
-            //child.removeFromSupernode()
-        }
-        self.renderCell = nil
-        self.renderEmptyView = nil
-        self.isEmpty = nil
-        self.disposeBag = .init()
-        self.reDisposeBag = .init()
-        self.children = []
-        //self.view.removeAllSubviews()
-    }
-    
-    
     
     public var debug = ""
     

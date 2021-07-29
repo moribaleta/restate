@@ -24,11 +24,11 @@ open class ReScrollNode : ASScrollNode, ReScrollNodeType, UIScrollViewDelegate {
         return self.emitOnScrollContent.asObservable()
     }
     
-    private var emitOnScroll         = PublishSubject<CGFloat>()
+    public var emitOnScroll         = PublishSubject<CGFloat>()
     
-    private var emitOnScrollContent  = PublishSubject<CGPoint>()
+    public var emitOnScrollContent  = PublishSubject<CGPoint>()
     
-    private var emitContentChanges   = BehaviorSubject<Void>(value: ())
+    public var emitContentChanges   = BehaviorSubject<Void>(value: ())
     
     public var sizeClass    : UIUserInterfaceSizeClass? {
         return self.asyncTraitCollection().horizontalSizeClass
@@ -95,7 +95,7 @@ open class ReScrollNode : ASScrollNode, ReScrollNodeType, UIScrollViewDelegate {
         //self.onContentChanges()
         
         self.emitContentChanges
-            .debounce(0.2, scheduler: MainScheduler.asyncInstance)
+            .debounce(.milliseconds(2), scheduler: MainScheduler.asyncInstance)
             .subscribe(onNext: {
             [unowned self] in
             self.onContentChanges()

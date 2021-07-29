@@ -26,7 +26,7 @@ import ReSwift
         * recommended :
             * perform setup in loadView
  */
-open class ReBaseController<E, T, V>: ASDKViewController<V>, StoreSubscriber where E : StateType, V : ASDisplayNode {
+open class ReBaseController<E, T, V>: ASDKViewController<ASDisplayNode>, StoreSubscriber where E : StateType {
 
     ///contains the store state being used be the view controller
     public var store : Store<E>?
@@ -51,7 +51,7 @@ open class ReBaseController<E, T, V>: ASDKViewController<V>, StoreSubscriber whe
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        (self.node as? SeNode<T>)?.reactiveBind(obx: self.statePublisher)
+        (self.node as? ReNode<T>)?.reactiveBind(obx: self.statePublisher)
         store?.subscribe(self)
     }
     
@@ -71,7 +71,7 @@ open class ReBaseController<E, T, V>: ASDKViewController<V>, StoreSubscriber whe
     
     ///override this function to listen to state changes before the state is published
     open func onStatePreRender(state: T) {
-        self.cache = T
+        self.cache = state
     }
     
     ///override function to implement state change on substate
@@ -89,7 +89,7 @@ open class ReSingleStateController<E, V> : ReBaseController<E,E,V> where E : Sta
     }
     
     ///override this function to listen to state changes before the state is published
-    open override func onStatePreRender(state: T) {
+    open override func onStatePreRender(state: E) {
         
     }
     

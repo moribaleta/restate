@@ -20,3 +20,34 @@ public protocol ProgressiveViewProtocol {
     func onDidViewVisible()
     func layoutContent(_ constrainedSize: ASSizeRange) -> ASLayoutSpec
 }
+
+
+class ReLoader : ResizeableNode {
+    
+    var loader = ResizeableNode()
+    
+    var indicator : UIActivityIndicatorView? {
+        self.loader.view as? UIActivityIndicatorView
+    }
+    
+    override init() {
+        super.init()
+        self.loader.setViewBlock({
+            UIActivityIndicatorView()
+        })
+        self.loader.style.height    = .init(unit: .points, value: 48)
+        self.loader.style.width     = .init(unit: .points, value: 48)
+    }
+    
+    override func didLoad() {
+        super.didLoad()
+        self.indicator?.startAnimating()
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        ASCenterLayoutSpec(
+            centeringOptions: .XY,
+            sizingOptions   : .minimumXY,
+            child           : self.loader)
+    }
+}

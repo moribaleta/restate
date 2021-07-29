@@ -22,7 +22,7 @@ public protocol ReTableItem: AnyObject {
  ATTENTION:
  * if you are using a single list use singleListBind() use sectionListBind() on multiple section
  */
-open class ReTable<E> : ASTableNode, ReactiveProtocol, ASTableDataSource, ASTableDelegate, SULScrollNodeType {
+open class ReTable<E> : ASTableNode, ReProtocol, ASTableDataSource, ASTableDelegate, ReScrollNodeType {
     
     
     
@@ -97,7 +97,7 @@ open class ReTable<E> : ASTableNode, ReactiveProtocol, ASTableDataSource, ASTabl
         self.leadingScreensForBatching = 0.2
         
         self.emitContentChanges
-            .debounce(0.5, scheduler: MainScheduler.asyncInstance)
+            .debounce(.milliseconds(5), scheduler: MainScheduler.asyncInstance)
             .subscribe(onNext: {
                 [weak self] in
                 self?.onContentChanges()
@@ -479,7 +479,7 @@ open class ReSingleTableUtilities {
     public class func DefaultHeader(item: Any?, table: ASTableNode) -> UIView {
         if let item = item as? String {
             let label = UILabel()
-            label.attributedText = Common.attributedString(item, attribute: .sublabel) //NSAttributedString(asLabel: item)
+            label.attributedText = NSAttributedString(string: item)
             label.backgroundColor = .white
             return label
         }

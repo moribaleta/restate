@@ -41,12 +41,6 @@ open class ReNode<T> : ResizeableNode {
         automaticallyManagesSubnodes = true
     }
     
-    open override func disposeView() {
-        super.disposeView()
-        self.reDisposeBag = .init()
-        self.disposeBag = .init()
-    }
-    
     /**
         called before renderstate and reactiveupdate
         * parameters:

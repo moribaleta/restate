@@ -16,7 +16,7 @@ import UIKit
  ATTENTION:
     * if you are using a single list use singleListBind() use sectionListBind() on multiple section
  */
-open class ReCollection<E> : ASCollectionNode, ReactiveProtocol, ASCollectionDataSource, ASCollectionDelegate {
+open class ReCollection<E> : ASCollectionNode, ReProtocol, ASCollectionDataSource, ASCollectionDelegate {
     
     public typealias StateList = StatePropertyList<StatePropertyList<E>>
     
@@ -53,7 +53,7 @@ open class ReCollection<E> : ASCollectionNode, ReactiveProtocol, ASCollectionDat
         self.view.panGestureRecognizer.delaysTouchesBegan = false
         
         self.emitContentChanges
-            .debounce(0.5, scheduler: MainScheduler.asyncInstance)
+            .debounce(.milliseconds(5), scheduler: MainScheduler.asyncInstance)
             .subscribe(onNext: {
                 [weak self] in
                 self?.onContentChanges()
@@ -253,7 +253,7 @@ open class ReCollection<E> : ASCollectionNode, ReactiveProtocol, ASCollectionDat
 
     // MARK: dont add private this will not be called if doing so
     // this delegate is called when the scrollView (i.e your UITableView) will start scrolling
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.lastContentOffset = scrollView.contentOffset.y
         if scrollEmitEnabled {
             self.emitOnScroll.onNext(lastContentOffset)
@@ -262,7 +262,7 @@ open class ReCollection<E> : ASCollectionNode, ReactiveProtocol, ASCollectionDat
 
     // MARK: dont add private this will not be called if doing so
     // while scrolling this delegate is being called so you may now check which direction your scrollView is being scrolled to
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.lastContentOffset = scrollView.contentOffset.y
         if scrollEmitEnabled {
             self.emitOnScroll.onNext(lastContentOffset)
@@ -301,7 +301,7 @@ open class ReCollection<E> : ASCollectionNode, ReactiveProtocol, ASCollectionDat
 }//SimpleRxTable
 
 
-extension ReCollection : SULScrollNodeType {
+extension ReCollection : ReScrollNodeType {
     
     public func onContentChanges() {
         guard automaticScrollHeightContentEmit else {

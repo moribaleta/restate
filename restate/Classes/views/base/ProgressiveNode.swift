@@ -17,7 +17,7 @@ import AsyncDisplayKit
 open class ProgressiveNode : ResizeableNode, ProgressiveViewProtocol{
     
     ///loader component
-    public var loader: SULLoaderContainer? = SULLoaderContainer()
+    public var loader: ASDisplayNode? = ASDisplayNode()
     
     ///used to determine if the view is visible from the screen
     public var isViewed    = false
@@ -25,7 +25,7 @@ open class ProgressiveNode : ResizeableNode, ProgressiveViewProtocol{
     public var disposeBag  = DisposeBag()
     
     ///value used for timing the interval - default is 0.3 seconds
-    public var interval_time = 0.3
+    public var interval_time : RxTimeInterval = .milliseconds(3)
     
     open override func didLoad() {
         super.didLoad()
@@ -67,9 +67,9 @@ reactive node implementation of the ProgressiveViewProtocol doesnt load the view
 open class ReProgressiveNode<T> : ReNode<T>, ProgressiveViewProtocol {
     public var isViewed: Bool = false
     
-    public var loader: SULLoaderContainer? = SULLoaderContainer()
+    public var loader: ASDisplayNode? = ASDisplayNode()
     
-    public var interval_time: RxTimeInterval = 0.3
+    public var interval_time: RxTimeInterval = .milliseconds(3)
     
     open override func didLoad() {
         super.didLoad()

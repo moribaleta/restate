@@ -144,7 +144,7 @@ extension ResizeableNode {
         return false
     }
 
-    public func rxVisible(interval : RxTimeInterval = 0.3) -> Observable<Bool> {
+    public func rxVisible(interval : RxTimeInterval = .milliseconds(3)) -> Observable<Bool> {
         // Every second this will check `isVisibleToUser`
         return Observable<Int>.interval(interval,
                                         scheduler: MainScheduler.asyncInstance)
